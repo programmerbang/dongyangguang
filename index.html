@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./js/index.js">
+    <script src="./node_modules/chart.js/dist/chart.js"></script>
+    <link href="./picktime/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="create" onclick="window.location.href='./page/create.html';return false">
+            创建排产计划
+        </div>
+        <div class="import_shedule" onclick="window.location.href='./page/import_shedule.html';return false">
+            <!-- 导入排产计划 -->
+            导入排产计划
+
+        </div>
+        <div class="mod" onclick="window.location.href='./picktime/index.html';return false">
+            更改电价
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="shedule">
+            <div class="fig">
+                <h3>各期炉子排产计划表</h3><br>
+                <canvas id="myChart2" width="1000px" height="700px"></canvas>
+                <script>
+                    var ctx = document.getElementById('myChart2');
+                    const data = {
+                        datasets: [{
+                            label: '一期',
+                            data: [
+                                {
+                                    x: 1,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 2,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 3,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 4,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 5,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 6,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 7,
+                                    y: 1,
+                                    r: 5
+                                },
+                                {
+                                    x: 8,
+                                    y: 1,
+                                    r: 5
+                                },
+
+                            ],
+                            backgroundColor: 'rgb(255, 99, 132)'
+                        },
+                            {
+                                label: '二期',
+                                data: [
+                                    {
+                                        x: 1,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 2,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 3,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 4,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 5,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 6,
+                                        y: 1,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 7,
+                                        y: 2,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 8,
+                                        y: 1,
+                                        r: 5
+                                    },
+
+                                ],
+                                backgroundColor: 'rgb(98,246,7)'
+                            },
+                            {
+                                label: '三期',
+                                data: [
+                                    {
+                                        x: 1,
+                                        y: 3,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 2,
+                                        y: 1,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 3,
+                                        y: 3,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 4,
+                                        y: 3,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 5,
+                                        y: 1,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 6,
+                                        y: 1,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 7,
+                                        y: 3,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 8,
+                                        y: 1,
+                                        r: 5
+                                    },
+                                    {
+                                        x: 5,
+                                        y: 3,
+                                        r: 5
+                                    }
+
+                                ],
+                                backgroundColor: 'rgb(255,175,3)'
+                            }]
+                    };
+                    var myBubbleChart = new Chart(ctx, {
+                        type: "bubble",
+                        data: data,
+                        options: []
+                    });
+
+                </script>
+
+
+            </div>
+
+        </div>
+        <div class="cost">
+            <h3>排产计划对应能耗图</h3><br>
+            <canvas id="chart" width="1200px" height="900px"></canvas>
+            <script>
+                new Chart(document.getElementById("chart"), {
+                    "type": "bar",
+                    "data": {
+
+                        "labels": ["1", "2", "3", "4", "5", "6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
+                        "datasets": [{
+                            yAxisID: 'A',
+                            "label": "能耗",
+                            "data": [3,3,3,3,3,3,3,8,8,8,8,5,5,5,5,5,5,5,5,8,8,8,8,3],
+                            "borderColor": "rgb(255, 99, 132)",
+                            "backgroundColor": "rgba(0,128,0,0.5)"
+                        }, {
+                            yAxisID: 'B',
+                            "label": "电价",
+                            "data": [0.3583,0.3583,0.3583,0.3583,0.3583,0.3583,0.3583,0.5583,0.5583,0.5583,0.5583,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5583,0.5583,0.5583,0.5583,0.3583],
+                            "type": "line",
+                            "fill": false,
+                            "borderColor": "rgb(54, 162, 235)"
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                id: 'A',
+                                type: 'linear',
+                                position: 'left',
+                                ticks: {
+                                    max: 10,
+                                    min: 0
+                                }
+                            }, {
+                                id: 'B',
+                                type: 'linear',
+                                position: 'right',
+                                ticks: {
+                                    max: 0.6,
+                                    min: 0
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+
+
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="predict">
+            电价预测
+        </div>
+
+        <div class="money">
+            此排产计划对应的花费为3600元。
+        </div>
+    </div>
+    </div>>
+
+    <script type="text/javascript" src="./picktime/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./picktime/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            // 当选择了一个时间选择器之后是否直接关闭
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1,
+            initialDate: new Date()
+        });
+    </script>
+
+>
+</body>
+
+</html>
