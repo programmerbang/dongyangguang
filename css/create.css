@@ -1,0 +1,44 @@
+.modify_box {
+
+    background-color: red;
+}
+.modify_box h3 {
+    float: left;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+/*.container {*/
+/*    float: left;*/
+/*    display: inline-block;*/
+/*    height: 100px;*/
+/*}*/
+.a011 {
+    position: absolute;
+    top: 0px;
+    left: -500px;
+    height: 100px ;
+    margin-left: 50%;
+}
+.a012 {
+    position: absolute;
+    top: 0px;
+    left: -500px;
+    height: 100px ;
+    margin-left: 50%;
+}
+.a021 {
+    position: absolute;
+    top: 100px;
+    left: -500px;
+    height: 100px ;
+    margin-left: 50%;
+}
+.a022 {
+    position: absolute;
+    top: 100px;
+    left: -500px;
+    height: 100px ;
+    margin-left: 50%;
+}
+

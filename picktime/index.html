@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="../css/modify.css">
+    <script src="../node_modules/chart.js/dist/chart.js"></script>
+    <title>更改电价</title>
+</head>
+
+<body>
+    <div class="modify_box">
+        <div class="container start">
+            <form action="" class="form-horizontal" role="form">
+<!--                <fieldset>-->
+                    <div class="form-group">
+                        <label for="dtp_input1" class="col-md-2 control-label">请选择开始时间</label>
+                        <div class="input-group date form_datetime col-md-5" data-date="2022-11-08 17:04:16"
+                            data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" /><br />
+                    </div>
+<!--                </fieldset>-->
+            </form>
+        </div>
+        <div class="container end">
+            <form action="" class="form-horizontal" role="form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="dtp_input1" class="col-md-2 control-label">请选择结束时间</label>
+                        <div class="input-group date form_datetime col-md-5" data-date="2022-11-08 17:04:16"
+                            data-date-format="yyyy-mm-dd hh:ii:ss" data-link-field="dtp_input1">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="price">
+<!--            <form name="input" action="html_form_action.php" method="get">-->
+<!--                Username: <input type="text" name="user">-->
+<!--                <input type="submit" value="Submit">-->
+<!--            </form>-->
+            <form name="请输入电价(单位：元/度)：">
+                电价(单位：元/度): <input type="text" name="user" style="height:35px;">
+                <input type="submit" value="确认修改" style="height:35px;">
+            </form>
+        </div>
+        <div class="figure">
+            <canvas id="myChart" width="1200px" height="900px"></canvas>
+            <script>
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["1", "2", "3", "4", "5", "6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
+                        datasets: [{
+
+                            data: [0.3583,0.3583,0.3583,0.3583,0.3583,0.3583,0.3583,0.5583,0.5583,0.5583,0.5583,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5283,0.5583,0.5583,0.5583,0.5583,0.3583],
+                            backgroundColor: [
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                "rgba(0,128,0,0.5)",
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255, 165, 0, 0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                'rgba(255,0,0,0.5)',
+                                "rgba(0,128,0,0.5)"
+
+                            ],
+                            borderColor: [
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                "rgba(0,128,0,1)",
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255, 165, 0, 1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                'rgba(255,0,0,1)',
+                                "rgba(0,128,0,1)"
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        // 隐藏图例
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            // 当选择了一个时间选择器之后是否直接关闭
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            forceParse: 0,
+            showMeridian: 1,
+            initialDate: new Date()
+        });
+    </script>
+
+</body>
+
+</html>

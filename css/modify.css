@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f2f7f8;
+
+}
+
+.modify_box {
+    position: relative;
+    height: 1000px;
+    width: 2000px;
+    margin: 100px auto;
+    /*background-color: pink;*/
+}
+.start {
+    position: absolute;
+    top: 30px;
+
+}
+.end {
+    position: absolute;
+    top: 30px;
+    right: 100px;
+}
+.price {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+.figure {
+    position: absolute;
+    top: 100px;
+    left: -500px;
+    margin-left: 50%;
+
+}
