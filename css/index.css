@@ -1,4 +1,7 @@
-body {
+html {
+    height: 100%;
+}
+#mmain {
     padding: 0;
     margin: 0;
     background-color: #f2f7f8;
@@ -7,14 +10,14 @@ body {
 
 .top {
     position: relative;
-    height: 100px;
+    height: 130px;
     /*background-color: pink*/
-    background-color: #f2f7f8
+    background-color: #f2f7f8;
 }
 .top .create {
     position: absolute;
-    top: 10px;
-    right: 600px;
+    top: 25px;
+    right: 550px;
     height: 78px;
     width: 198px;
     border: 1px solid #fff;
@@ -24,11 +27,11 @@ body {
     text-align: center;
     line-height: 78px;
     border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 }
 .top .import_shedule {
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 300px;
     height: 78px;
     width: 198px;
@@ -39,12 +42,12 @@ body {
     text-align: center;
     line-height: 78px;
     border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 }
 
 .top .mod {
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 50px;
     height: 78px;
     width: 198px;
@@ -55,31 +58,38 @@ body {
     text-align: center;
     line-height: 78px;
     border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4)
 }
 
 .box {
     position: relative;
-    height: 1000px;
+    height: 900px;
     background-color: #f2f7f8
 }
 
 .box .shedule {
     position: absolute;
-    top: 100px;
+    top: 0px;
     right:55%;
     /*margin-right: 100px;*/
-    height: 800px;
+    height: 900px;
     width: 1000px;
     /*background-color: purple;*/
-    border: 1px solid black;
+    border: 1px solid darkgray;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 
 }
 .box .shedule .fig {
-    top: 50px;
-    height: 800px;
+    position: absolute;
+    height: 900px;
     width: 1000px;
     text-align: center;
+}
+.box .shedule .fig .mmm {
+    position: absolute;
+    top: 100px;
+    height: 800px;
+    width: 1000px;
 }
 
 
@@ -93,27 +103,28 @@ body {
 /*}*/
 .box .cost {
     position: absolute;
-    top: 100px;
+    top: 0px;
     left: 55%;
     /*margin-left: 100px;*/
-    height: 800px;
+    height: 900px;
     width: 1000px;
     text-align: center;
     /*background-color: purple;*/
-    border: 1px solid black;
+    border: 1px solid darkgray;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 }
 
 .foot {
     position: relative;
-    height: 100px;
+    height: 130px;
     /*background-color: rgb(116, 181, 221);*/
     background-color: #f2f7f8
 }
 
 .foot .predict {
     position: absolute;
-    top: 10px;
-    right: 600px;
+    top: 25px;
+    right: 550px;
     height: 78px;
     width: 198px;
     border: 1px solid #fff;
@@ -123,12 +134,12 @@ body {
     text-align: center;
     line-height: 78px;
     border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4)
 }
 
 .foot .money {
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 50px;
     height: 78px;
     width: 498px;
@@ -137,4 +148,18 @@ body {
     font-size: 30px;
     text-align: center;
     line-height: 78px;
+}
+.foot2 {
+    position: relative;
+    margin-top: 0px;
+    /*background-color: rgb(116, 181, 221);*/
+    background-color: #f2f7f8
+}
+#mmm {
+    width: 998px;
+    height: 100%;
+}
+#price_cost {
+    width: 1000px;
+    height: 800px;
 }
